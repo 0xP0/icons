@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Olares AI">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101a2e"/>
+      <stop offset="1" stop-color="#060b16"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+
+  <!-- 三条连线：助手在中间，两侧是它操作的应用。先画线，让节点盖住端点。 -->
+  <g stroke="url(#mark)" stroke-width="9" stroke-linecap="round" opacity=".55">
+    <path d="M128 128 L64 72"/>
+    <path d="M128 128 L192 72"/>
+    <path d="M128 128 L128 196"/>
+  </g>
+
+  <!-- 三个应用节点 -->
+  <g fill="url(#mark)">
+    <rect x="44" y="52" width="40" height="40" rx="12"/>
+    <rect x="172" y="52" width="40" height="40" rx="12"/>
+    <rect x="108" y="176" width="40" height="40" rx="12"/>
+  </g>
+
+  <!-- 助手本体：环 + 实心核，与节点区分开 -->
+  <circle cx="128" cy="128" r="31" fill="#060b16"/>
+  <circle cx="128" cy="128" r="31" fill="none" stroke="url(#mark)" stroke-width="10"/>
+  <circle cx="128" cy="128" r="10" fill="url(#mark)"/>
+</svg>
